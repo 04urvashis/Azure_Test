@@ -17,7 +17,7 @@ steps:
     Contents: '**\bin'
     ArtifactName: 'azure_Firstartifacts'
     ArtifactType: 'FilePath'
-  inputs:
+  
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
