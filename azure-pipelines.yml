@@ -11,6 +11,12 @@ pool:
 
 steps:
 - task: Maven@3
+- task: CopyPublishBuildArtifacts@1
+  inputs:
+    CopyRoot: '$(Agent.BuildDirectory)'
+    Contents: '**\bin'
+    ArtifactName: 'azure_Firstartifacts'
+    ArtifactType: 'FilePath'
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
